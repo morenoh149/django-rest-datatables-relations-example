@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from pages.models import Expert, Meeting
+
+admin.site.register(Expert)
+admin.site.register(Meeting)

@@ -1,27 +1,4 @@
-> A batteries-included Django starter project. For a production-ready version see the book [Django for Professionals](https://djangoforprofessionals.com).
-
-## 🚀 Features
-
-- Django 3.1 & Python 3.8
-- Install via [Pip](https://pypi.org/project/pip/), [Pipenv](https://pypi.org/project/pipenv/), or [Docker](https://www.docker.com/)
-- User log in/out, sign up, password reset via [django-allauth](https://github.com/pennersr/django-allauth)
-- Static files configured with [Whitenoise](http://whitenoise.evans.io/en/stable/index.html)
-- Styling with [Bootstrap v4](https://github.com/twbs/bootstrap)
-- Debugging with [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
-- DRY forms with [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms)
-
-![Homepage](homepage.png)
-----
-
-## Table of Contents
-* **[Installation](#installation)**
-  * [Pip](#pip)
-  * [Pipenv](#pipenv)
-  * [Docker](#docker)
-* [Setup](#setup)
-* [Contributing](#contributing)
-* [Support](#support)
-* [License](#license)
+A minimal example of django-rest-datatables
 
 ----
 
@@ -93,14 +70,6 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 
 ----
 
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](https://github.com/wsvincent/djangox/blob/master/CONTRIBUTING.md).
-
-## ⭐️ Support
-
-Give a ⭐️  if this project helped you!
-
 ## License
 
 [The MIT License](LICENSE)
@@ -132,17 +101,3 @@ $ docker-compose run --rm web pytest
 # Re-build PIP requirements
 $ docker-compose run --rm web pip-compile requirements/requirements.in
 ```-->
-
-<!-- ## Next Steps
-
-- Use [PostgreSQL locally via Docker](https://wsvincent.com/django-docker-postgresql/)
-- Use [django-environ](https://github.com/joke2k/django-environ) for environment variables
-- Update [EMAIL_BACKEND](https://docs.djangoproject.com/en/3.0/topics/email/#module-django.core.mail) to configure an SMTP backend
-- Make the [admin more secure](https://opensource.com/article/18/1/10-tips-making-django-admin-more-secure)
-
-## Adding Social Authentication
-
-- [Configuring Google](https://wsvincent.com/django-allauth-tutorial-custom-user-model/#google-credentials)
-- [Configuring Facebook](http://www.sarahhagstrom.com/2013/09/the-missing-django-allauth-tutorial/#Create_and_configure_a_Facebook_app)
-- [Configuring Github](https://wsvincent.com/django-allauth-tutorial/)
-- `django-allauth` supports [many, many other providers in the official docs](https://django-allauth.readthedocs.io/en/latest/providers.html) -->
