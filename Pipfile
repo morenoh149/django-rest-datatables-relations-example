@@ -13,6 +13,7 @@ django-debug-toolbar = "==3.2"
 whitenoise = "==5.2.0"
 djangorestframework = "~=3.12.0"
 djangorestframework-datatables = "~=0.6.0"
+psycopg2-binary = "==2.8.6"
 
 [requires]
 python_version = "3.9"
