@@ -7,14 +7,8 @@ User = get_user_model()
 class Expert(models.Model):
     name = models.CharField(blank=True, max_length=300)
 
-    def __str__(self):
-        return f"{self.name}"
-
 
 class Meeting(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True)
     expert = models.ForeignKey(Expert, on_delete=models.SET_NULL, blank=True, null=True)
     objective = models.TextField(null=True, blank=True)
-
-    def __str__(self):
-        return f"id: {self.id}"

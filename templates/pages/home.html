@@ -19,22 +19,4 @@
     </thead>
   </table>
 </div>
-<script src="//code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-  <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-  <script>
-      $(document).ready(function() {
-          var table = $('#albums').DataTable({
-              "serverSide": true,
-              "ajax": "/api/albums/?format=datatables",
-              "columns": [
-                  {"data": "rank", "searchable": false},
-                  {"data": "artist_name", "name": "artist.name"},
-                  {"data": "name"},
-                  {"data": "year"},
-                  {"data": "genres", "name": "genres.name", "sortable": false},
-              ]
-          });
-      });
-  </script>
 {% endblock content %}

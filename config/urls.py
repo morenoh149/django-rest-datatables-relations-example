@@ -9,7 +9,7 @@ from pages import views
 
 router = routers.DefaultRouter()
 router.register(r"experts", views.ExpertViewSet)
-router.register(r"experts", views.MeetingViewSet)
+router.register(r"meetings", views.MeetingViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

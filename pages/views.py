@@ -2,8 +2,8 @@ from django.views.generic import TemplateView
 
 from rest_framework import viewsets
 
-from meetings.models import Expert, Meeting
-from meetings.serializers import ExpertSerializer, MeetingSerializer
+from pages.models import Expert, Meeting
+from pages.serializers import ExpertSerializer, MeetingSerializer
 
 
 class HomePageView(TemplateView):
