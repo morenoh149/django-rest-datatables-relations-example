@@ -1,5 +1,7 @@
 A minimal example of django-rest-datatables
 
+Currently I'd like to filter experts by historical meeting objectives in the datatables searchbar.
+
 ----
 
 ## 📖 Installation
