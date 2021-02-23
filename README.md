@@ -5,12 +5,6 @@ Currently I'd like to filter experts by historical meeting objectives in the dat
 ----
 
 ## 📖 Installation
-DjangoX can be installed via Pip, Pipenv, or Docker depending upon your setup. To start, clone the repo to your local computer and change into the proper directory.
-
-```
-$ git clone https://github.com/wsvincent/djangox.git
-$ cd djangox
-```
 
 ### Pip
 
