@@ -65,6 +65,9 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # Confirm everything is working:
 (djangox) $ python manage.py runserver
 
+# load seed data
+(djangox) $ python manage.py loaddata fixtures.json
+
 # Load the site at http://127.0.0.1:8000
 ```
 
