@@ -5,7 +5,7 @@ $(document).ready(function() {
     "columns": [
       {"data": "id"},
       {"data": "name"},
-      {"data": "objectives"}
+      {"data": "objectives", "name": "objectives"}
     ]
   });
 });

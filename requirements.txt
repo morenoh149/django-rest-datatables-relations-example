@@ -6,3 +6,4 @@ whitenoise==5.2.0
 djangorestframework==3.12.0
 djangorestframework-datatables==0.6.0
 psycopg2-binary==2.8.6
+django-filter>=2.4.0
