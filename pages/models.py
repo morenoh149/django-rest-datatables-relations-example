@@ -7,6 +7,9 @@ User = get_user_model()
 class Expert(models.Model):
     name = models.CharField(blank=True, max_length=300)
 
+    def __str__(self):
+        return self.name
+
 
 class Meeting(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True)
