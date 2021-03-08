@@ -13,13 +13,24 @@ from pages.serializers import ExpertSerializer, MeetingSerializer
 class GlobalCharFilter(GlobalFilter, filters.CharFilter):
     pass
 
-class HomePageView(TemplateView):
-    template_name = 'pages/home.html'
+
+class AssociatedMeetingCharFilter(filters.CharFilter):
+    def global_q(self):
+        """
+        Uses the global filter to search a meeting field of meetings owned by the logged in user
+        """
+        if not self._global_search_value:
+            return Q()
+        kw = "meeting__{}__{}".format(self.field_name, self.lookup_expr)
+        return Q(**{
+            kw: self._global_search_value,
+            "meeting__user_id": self.parent.request.user.id or -1,
+        })
 
 
 class ExpertGlobalFilterSet(DatatablesFilterSet):
     name = GlobalCharFilter(lookup_expr='icontains')
-    objectives = GlobalCharFilter(field_name='meeting__objective', lookup_expr='icontains')
+    objectives = AssociatedMeetingCharFilter(field_name='objective', lookup_expr='icontains')
 
     class Meta:
         model = Expert
@@ -37,3 +48,7 @@ class MeetingViewSet(viewsets.ModelViewSet):
     serializer_class = MeetingSerializer
     permission_classes = []
     filterset_fields = []
+
+
+class HomePageView(TemplateView):
+    template_name = 'pages/home.html'
